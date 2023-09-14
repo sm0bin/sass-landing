@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Poppins:wght@400;500;600;700&display=swap");
+
+@import "variables";
+@import "utilities";
+
+main {
+  background-color: $primary;
+  color: $secondary;
+}
+
+header {
+  //   background-color: $accent;
+  padding: 24px 0;
+  border-bottom: 1px solid $secondary;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h2 {
+    font: {
+      family: $headline;
+      size: 2rem;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    li {
+      list-style: none;
+    }
+  }
+}
+.hero {
+  display: flex;
+  align-items: center;
+  // place-items: center;
+  // place-content: center;
+  gap: 32px;
+  justify-content: space-between;
+  min-height: 80vh;
+
+  h1 {
+    font: {
+      family: $headline;
+      size: 3rem;
+    }
+    margin-bottom: 24px;
+  }
+  p {
+    margin-bottom: 24px;
+  }
+}
+
+.hero-img {
+  width: 50%;
+}
