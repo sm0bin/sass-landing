@@ -22,26 +22,28 @@ nav {
   h2 {
     font: {
       family: $headline;
-      size: 2rem;
+      size: 2.5rem;
     }
   }
 
   ul {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 56px;
 
     li {
       list-style: none;
+      font-size: 1.25rem;
     }
   }
 }
+
 .hero {
   display: flex;
   align-items: center;
   // place-items: center;
   // place-content: center;
-  gap: 32px;
+  gap: 100px;
   justify-content: space-between;
   min-height: 80vh;
 
@@ -50,13 +52,15 @@ nav {
       family: $headline;
       size: 3rem;
     }
+    line-height: 1.2;
     margin-bottom: 24px;
   }
   p {
-    margin-bottom: 24px;
+    font-size: 1.125rem;
+    margin-bottom: 48px;
+    line-height: 1.6;
   }
-}
-
-.hero-img {
-  width: 50%;
+  img {
+    width: 40%;
+  }
 }
