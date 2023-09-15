@@ -3,26 +3,26 @@
 @import "variables";
 @import "utilities";
 
-main {
+.header-hero-container {
   background-color: $primary;
   color: $secondary;
 }
 
 header {
   //   background-color: $accent;
+  max-width: 1280px;
+  margin: 0 auto;
   padding: 24px 0;
   border-bottom: 1px solid $secondary;
-}
+  nav {
+    @include flex-align;
+    justify-content: space-between;
 
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  h2 {
-    font: {
-      family: $headline;
-      size: 2.5rem;
+    h2 {
+      font: {
+        family: $headline;
+        size: 2.5rem;
+      }
     }
   }
 
@@ -39,8 +39,9 @@ nav {
 }
 
 .hero {
-  display: flex;
-  align-items: center;
+  @include flex-align;
+  max-width: 1280px;
+  margin: 0 auto;
   // place-items: center;
   // place-content: center;
   gap: 100px;
@@ -63,4 +64,69 @@ nav {
   img {
     width: 40%;
   }
+}
+
+.our-services {
+  @include h1-sub;
+
+  .cards {
+    display: flex;
+    gap: 20px;
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 16px;
+      border: 1px solid $primary;
+
+      img {
+        display: block;
+        height: 120px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font: {
+          weight: 600;
+        }
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.features {
+  @include flex-align;
+  padding: 2.5rem;
+  gap: 1.5rem;
+  border-radius: 1rem;
+
+  background: $primary;
+  color: $secondary;
+
+  .vertical-line {
+    border-left: 2px solid $secondary;
+    height: 70px;
+    width: 2px;
+  }
+
+  .card {
+    @include flex-align;
+    // display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.featured-services {
+  @include h1-sub;
 }
