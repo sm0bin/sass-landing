@@ -1,0 +1,54 @@
+@media screen and (max-width: 640px) {
+  .hero,
+  .container {
+    margin: 3rem 1.25rem;
+  }
+  .hero {
+    margin: 0 1.25rem;
+    padding: 4rem 0;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  .hero img {
+    display: none;
+  }
+
+  nav,
+  nav ul,
+  .btn-container,
+  .features,
+  .achievements .container {
+    flex-direction: column;
+  }
+
+  nav,
+  nav ul,
+  .footer-links ul {
+    gap: 1.5rem;
+  }
+
+  footer ul {
+    flex-wrap: wrap;
+  }
+
+  .vertical-line {
+    // display: none;
+    // border: none;
+    border-width: 0 !important;
+    border-bottom: 1px solid $white !important;
+    height: auto !important;
+    width: 100% !important;
+    margin: 1.5rem auto;
+  }
+
+  .featured-services,
+  .featured-services .cards,
+  .testimonial .cards,
+  .benefits .cards,
+  .contact {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
