@@ -257,8 +257,10 @@ header {
     .accordion-header {
       @include flex-align;
       @include set-bg-color($white);
-      padding: 20px;
       justify-content: space-between;
+      padding: 20px;
+      cursor: pointer;
+
       h3 {
         margin-bottom: 0;
         line-height: 1.6;
