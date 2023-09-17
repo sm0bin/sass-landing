@@ -2,10 +2,11 @@ $primary: slateblue;
 $primaryLight: #d4cdff66;
 $secondary: #f0effa;
 $white: #fff;
-$accent: purple;
 
 $text-color: #2a2452;
 $bg-color: #f0effa;
+
+$dark-bg: #555075;
 
 $primary-blue-100: #eceeff;
 $primary-blue-200: #daddff;
@@ -32,4 +33,43 @@ $body: "Poppins", sans-serif;
 @mixin set-bg-color($color) {
   background-color: $color;
   color: set-text-color($color);
+}
+
+@mixin hero-button {
+  padding: 16px 48px;
+  text-align: center;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  //   margin: none;
+  font: {
+    weight: 500;
+    size: 1.25rem;
+  }
+
+  &:hover {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+}
+
+@mixin flex-align($align: center) {
+  display: flex;
+  align-items: $align;
+}
+
+@mixin h1-sub {
+  .head {
+    font: {
+      family: $headline;
+      size: 3rem;
+    }
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .subhead {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 }

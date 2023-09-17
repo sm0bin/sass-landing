@@ -28,4 +28,4 @@ Explore the live website [DevWeb Pro](https://sm0bin.github.io/sass-landing/).
 
 ---
 
-_This project was created and is developed by [Shehjad Mobin](http://sm0bin.com/)._
+_This project was created and is developed by [Shehjad Mobin](http://smobin.com/)._

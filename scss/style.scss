@@ -78,13 +78,13 @@ header {
     gap: 20px;
 
     .card {
-      @include set-bg-color($white);
-      padding: 1.5rem;
-      border-radius: 16px;
-      border: 1px solid $primary;
+      // @include set-bg-color($white);
+      // padding: 1.5rem;
+      // border-radius: 16px;
+      // border: 1px solid $primary;
 
       &:hover {
-        @include set-bg-color($primary);
+        // @include set-bg-color($primary);
       }
 
       img {
@@ -218,7 +218,7 @@ header {
 }
 
 .contact-holder {
-  background-color: $primaryLight;
+  // background-color: $primaryLight;
   padding: 1rem 0;
 }
 
@@ -226,27 +226,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 1.5rem;
 
-    input,
-    textarea {
-      @include set-bg-color($white);
-      padding: 20px;
-      border-radius: 1rem;
-      font-size: 1.125rem;
-      border: 1px solid $primary;
-
-      &:focus {
-        border: none;
-        outline: none;
-        border: 2px solid $primary;
-      }
-    }
-  }
   .accordion-item {
     margin-top: 24px;
     border-radius: 1rem;
@@ -256,7 +236,7 @@ header {
 
     .accordion-header {
       @include flex-align;
-      @include set-bg-color($white);
+      // @include set-bg-color($white);
       justify-content: space-between;
       padding: 20px;
       cursor: pointer;
@@ -335,5 +315,23 @@ footer {
   }
 }
 
+html.active {
+  background-color: $text-color;
+  color: $bg-color;
+
+  input,
+  textarea,
+  .contact .accordion-item,
+  .card {
+    @include set-bg-color($dark-bg);
+    border: none;
+  }
+}
+
+// .featured-services button {
+//   @include set-bg-color($dark-bg);
+// }
+
+// @import "dark";
 @import "mobile";
 @import "tablet";

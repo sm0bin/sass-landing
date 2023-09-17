@@ -14,3 +14,8 @@ const menu = document.querySelector("#menu-btn");
 menu.addEventListener("click", () => {
     nav.classList.toggle("active");
 })
+const html = document.querySelector("html");
+const dark = document.querySelector("#dark-btn");
+dark.addEventListener("click", () => {
+    html.classList.toggle("active");
+})
