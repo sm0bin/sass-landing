@@ -21,9 +21,37 @@
   margin: 8rem auto;
 }
 
+// All Headings
+h1 {
+  font: {
+    family: $headline;
+    size: 3rem;
+  }
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font: {
+    family: $headline;
+    size: 1.75rem;
+  }
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+h3 {
+  font: {
+    family: $body;
+    weight: 600;
+    size: 1.5rem;
+  }
+  margin-bottom: 0.75rem;
+}
+
 p {
   font-size: 1.125rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 a {
