@@ -23,8 +23,7 @@ header {
   }
 
   ul {
-    display: flex;
-    align-items: center;
+    @include flex-align;
     gap: 56px;
 
     li {
@@ -279,4 +278,58 @@ header {
 .accordion-item.active .accordion-content {
   display: block;
   padding: 20px;
+}
+
+footer {
+  background-color: $primary-blue-950;
+  color: $secondary;
+
+  .footer-content {
+    padding: 4rem 0;
+    text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    hr {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      margin: 3rem auto;
+      width: 300px;
+    }
+
+    .footer-links {
+      text-align: center;
+      margin: 3rem auto;
+
+      ul {
+        @include flex-align;
+        // margin: auto;
+        justify-content: center;
+        gap: 4rem;
+        font-size: 1.25rem;
+        // font-weight: 500;
+      }
+    }
+    .social-media {
+      margin: 3rem auto;
+      @include flex-align;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0 0;
+    }
+  }
+
+  .footer-disclaimer {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    padding: 1rem;
+
+    a {
+      font-weight: 600;
+
+      &:hover {
+        // color: $primary-blue-100;
+        text-decoration: underline;
+      }
+    }
+  }
 }
