@@ -1,11 +1,11 @@
 @media screen and (max-width: 640px) {
   .hero,
   .container {
-    margin: 3rem 1.25rem;
+    margin: 5rem 1.25rem;
   }
   .hero {
     margin: 0 1.25rem;
-    padding: 4rem 0;
+    padding: 5rem 0;
   }
 
   header {
@@ -16,7 +16,36 @@
     display: none;
   }
 
-  nav,
+  #menu-btn {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+
+  nav.active ul {
+    display: flex;
+    @include set-bg-color($secondary);
+    padding: 2rem;
+    border-radius: 1rem;
+    gap: 2rem;
+    position: absolute;
+    top: 90px;
+    right: 1.25rem;
+    z-index: 10;
+
+    li {
+      // margin: 0;
+      // font-size: 1.5rem;
+      display: block;
+      // margin-bottom: 1.25rem;
+    }
+  }
+
+  nav {
+    margin: 0 1.25rem;
+  }
+
   nav ul,
   .btn-container,
   .features,
@@ -24,10 +53,8 @@
     flex-direction: column;
   }
 
-  nav,
-  nav ul,
-  .footer-links ul {
-    gap: 1.5rem;
+  .contact {
+    gap: 5rem;
   }
 
   footer ul {
@@ -40,8 +67,8 @@
     border-width: 0 !important;
     border-bottom: 1px solid $white !important;
     height: auto !important;
-    width: 100% !important;
-    margin: 1.5rem auto;
+    width: 30% !important;
+    margin: 3rem auto;
   }
 
   .featured-services,

@@ -7,7 +7,21 @@
   @include set-bg-color($primary);
   // @include set-bg-color($primary-blue-100);
 }
-
+#menu-btn {
+  background-color: transparent;
+  color: $white;
+  @include flex-align;
+  justify-content: center;
+  // width: 48px;
+  // height: 48px;
+  padding: 0.5rem 1rem;
+  border: 1px solid $secondary;
+  border-radius: 0.5rem;
+  display: none;
+}
+#menu-btn {
+  display: none;
+}
 header {
   max-width: 1280px;
   margin: 0 auto;
