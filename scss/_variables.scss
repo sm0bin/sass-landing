@@ -1,7 +1,11 @@
 $primary: slateblue;
 $primaryLight: #d4cdff66;
-$secondary: white;
+$secondary: #f0effa;
+$white: #fff;
 $accent: purple;
+
+$text-color: #2a2452;
+$bg-color: #f0effa;
 
 $primary-blue-100: #eceeff;
 $primary-blue-200: #daddff;
@@ -16,3 +20,16 @@ $primary-blue-950: #0e1133;
 
 $headline: "Playfair Display", serif;
 $body: "Poppins", sans-serif;
+
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return $text-color;
+  } @else {
+    @return $bg-color;
+  }
+}
+
+@mixin set-bg-color($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}

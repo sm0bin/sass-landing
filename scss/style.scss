@@ -4,8 +4,8 @@
 @import "utilities";
 
 .header-hero-container {
-  background-color: $primary;
-  color: $secondary;
+  @include set-bg-color($primary);
+  // @include set-bg-color($primary-blue-100);
 }
 
 header {
@@ -49,7 +49,7 @@ header {
   }
 }
 
-.our-services {
+.benefits {
   @include h1-sub;
 
   .cards {
@@ -58,14 +58,13 @@ header {
     gap: 20px;
 
     .card {
-      background: white;
+      @include set-bg-color($white);
       padding: 1.5rem;
       border-radius: 16px;
       border: 1px solid $primary;
 
       &:hover {
-        background-color: $primary;
-        color: $secondary;
+        @include set-bg-color($primary);
       }
 
       img {
@@ -88,13 +87,11 @@ header {
 }
 
 .features {
-  @include flex-align;
+  @include flex-align(flex-start);
+  @include set-bg-color($primary);
   padding: 2.5rem;
   gap: 1.5rem;
   border-radius: 1rem;
-
-  background: $primary;
-  color: $secondary;
 
   .vertical-line {
     border-left: 2px solid $secondary;
@@ -102,7 +99,7 @@ header {
     width: 2px;
   }
 
-  .card {
+  .f-card {
     @include flex-align;
     align-items: flex-start;
     gap: 1rem;
@@ -143,8 +140,7 @@ header {
       font-size: 1.25rem;
     }
     button {
-      background-color: $primary;
-      color: $secondary;
+      @include set-bg-color($primary);
     }
   }
 
@@ -154,15 +150,6 @@ header {
     gap: 20px;
 
     .card {
-      text-align: center;
-      border: 1px solid $primary;
-      border-radius: 1rem;
-      padding: 3.25rem 0;
-
-      &:hover {
-        background-color: $primary;
-        color: $secondary;
-      }
       img {
         margin-bottom: 1rem;
       }
@@ -183,8 +170,7 @@ header {
   }
   // border-radius: 1rem;
 
-  background: $primary;
-  color: $secondary;
+  @include set-bg-color($primary);
 
   .vertical-line {
     border-left: 2px solid $secondary;
@@ -192,7 +178,7 @@ header {
     width: 2px;
   }
 
-  .card {
+  .a-card {
     text-align: center;
 
     h3 {
@@ -208,13 +194,6 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-
-    .card {
-      text-align: center;
-      border: 1px solid $primary;
-      border-radius: 1rem;
-      padding: 20px;
-    }
   }
 }
 
@@ -235,6 +214,7 @@ header {
 
     input,
     textarea {
+      @include set-bg-color($white);
       padding: 20px;
       border-radius: 1rem;
       font-size: 1.125rem;
@@ -252,11 +232,11 @@ header {
     border-radius: 1rem;
     border: 1px solid $primary;
     overflow: hidden;
-    background-color: $secondary;
+    @include set-bg-color($white);
 
     .accordion-header {
       @include flex-align;
-      background-color: $secondary;
+      @include set-bg-color($white);
       padding: 20px;
       justify-content: space-between;
       h3 {
@@ -281,8 +261,7 @@ header {
 }
 
 footer {
-  background-color: $primary-blue-950;
-  color: $secondary;
+  @include set-bg-color($text-color);
 
   .footer-content {
     padding: 4rem 0;

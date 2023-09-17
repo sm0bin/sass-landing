@@ -6,16 +6,10 @@ footer {
   font-family: $body;
 }
 
-// body {
-//   background-color: $primary;
-//   background-image: url("../images/blue\ gradiant\ mash\ background-01.png");
-//   background-position: top;
-//   background-repeat: no-repeat;
-//   background-size: 100vw;
-//   object-fit: scale-down;
-//   background
-//   color: $secondary;
-// }
+html {
+  background-color: $bg-color;
+  color: $text-color;
+}
 
 .container {
   max-width: 1280px;
@@ -58,8 +52,11 @@ p {
 a {
   text-decoration: none;
   color: inherit;
+  transition: transform 0.3s ease-in-out;
+
   &:hover {
-    color: skyblue;
+    color: $primary-blue-200;
+    transform: scale(1.5);
   }
 }
 
@@ -85,7 +82,6 @@ a {
   @include hero-button;
   background: $secondary;
   color: $primary;
-  //   padding: 16px 16px;
 }
 .button-secondary {
   @include hero-button;
@@ -95,9 +91,9 @@ a {
   margin-right: 20px;
 }
 
-@mixin flex-align {
+@mixin flex-align($align: center) {
   display: flex;
-  align-items: center;
+  align-items: $align;
 }
 
 @mixin h1-sub {
@@ -113,5 +109,17 @@ a {
   .subhead {
     text-align: center;
     margin-bottom: 2rem;
+  }
+}
+
+.card {
+  @include set-bg-color($white);
+  text-align: center;
+  border: 1px solid $primary;
+  border-radius: 1rem;
+  padding: 1.25rem;
+
+  &:hover {
+    @include set-bg-color($primary);
   }
 }
